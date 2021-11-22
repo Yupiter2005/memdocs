@@ -61,6 +61,12 @@ The computer account of the site server must be a member of the local **Administ
 
 Each replica in the availability group must run a version of SQL Server that's supported by your version of Configuration Manager. When supported by SQL Server, different nodes of an availability group can run different versions of SQL Server. For more information, see [Supported SQL Server versions for Configuration Manager](../../../plan-design/configs/support-for-sql-server-versions.md).<!--SCCMDocs issue 656-->
 
+#### Server Collation
+
+Both the instance of SQL Server that's used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.  
+
+Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](../hierarchy/international-support.md).  
+
 #### Edition
 
 Use an *Enterprise* edition of SQL Server.
